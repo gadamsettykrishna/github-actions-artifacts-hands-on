@@ -14,10 +14,10 @@ jobs:
       run: echo "Hello, world!" > hello.txt
 
     - name: Archive text file
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4.3.3
       with:
         name: hello-artifact
-        path: hello.txt
+        path: ./artifacts
   download:
    needs: build
    runs-on: ubuntu-latest
